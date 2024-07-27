@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Campground</title>
+</head>
+
+<body>
+    <form action="/campground" method="POST">
+        <div>
+            <!-- so when we say name and structure it like this,
+             what we are doing is making the thing that it sends
+             to look like  {
+  "campground": {
+    "title": "The user-entered title",
+    "location": "The user-entered location"
+  }
+}-->
+            <label for='title'> Title</label>
+            <input type="text" , id="title" name="campground[title]">
+        </div>
+        <div>
+            <label for='location'> location</label>
+            <input type="text" , id="location" name="campground[location]">
+        </div>
+        <button>add</button>
+
+        <footer>
+            <a href="/campground">campgrounds</a>
+        </footer>
+    </form>
+</body>
+
+</html>
